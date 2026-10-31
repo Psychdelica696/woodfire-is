@@ -17,3 +17,10 @@ export function writeOffByRecipe(items, recipes, stock) {
   }
   return next;
 }
+
+// FR-2.2: перелік інгредієнтів, залишок яких досяг мінімального порогу.
+export function findLowStock(stock) {
+  return [...stock.values()]
+    .filter((s) => s.stockQty <= s.minQty)
+    .map((s) => `${s.name}: ${s.stockQty} (мін. ${s.minQty})`);
+}
