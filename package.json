@@ -1,0 +1,12 @@
+{
+  "name": "woodfire-is",
+  "version": "0.1.0",
+  "description": "Інформаційна система піцерії WoodFire",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test --test-reporter=spec",
+    "check": "node scripts/check-structure.js"
+  }
+}
