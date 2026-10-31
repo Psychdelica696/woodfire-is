@@ -2,6 +2,6 @@
 export const BUSINESS_RULES = {
   CURRENCY: 'UAH',
   MAX_ACTIVE_ORDERS: 50,      // нефункціональна вимога SRS
-  BONUS_RATE: 0.03,
+  BONUS_RATE: 0.05,          // осіння акція: 5 % бонусами
   MAX_BONUS_SHARE: 0.5,       // бонусами можна сплатити не більше 50 % замовлення
 };
