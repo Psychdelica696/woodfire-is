@@ -41,7 +41,7 @@ woodfire-is/
 ## Запуск
 Потрібен Node.js 20 або новіший; сторонні залежності не використовуються.
 ```bash
-git clone https://github.com/<логін>/woodfire-is.git
+git clone https://github.com/Psychdelica696/woodfire-is.git
 cd woodfire-is
 npm test          # запуск автоматизованих тестів
 npm run check     # перевірка структури репозиторію
