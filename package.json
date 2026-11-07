@@ -4,9 +4,12 @@
   "description": "Інформаційна система піцерії WoodFire",
   "type": "module",
   "private": true,
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "test": "node --test --test-reporter=spec",
+    "lint": "node scripts/check-syntax.js",
     "check": "node scripts/check-structure.js"
   }
 }

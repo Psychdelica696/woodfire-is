@@ -1,5 +1,7 @@
 # WoodFire — інформаційна система піцерії з дров'яною піччю
 
+[![WoodFire CI](https://github.com/Psychdelica696/woodfire-is/actions/workflows/ci.yml/badge.svg)](https://github.com/Psychdelica696/woodfire-is/actions/workflows/ci.yml)
+
 Навчальний проєкт з дисципліни «Технології розроблення програмних систем» (КНУ ім. Тараса Шевченка, ФІТ, група ПП-42).
 
 ## Призначення
@@ -43,6 +45,7 @@ woodfire-is/
 ```bash
 git clone https://github.com/Psychdelica696/woodfire-is.git
 cd woodfire-is
+npm run lint      # перевірка синтаксису JavaScript
 npm test          # запуск автоматизованих тестів
 npm run check     # перевірка структури репозиторію
 ```

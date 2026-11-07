@@ -5,13 +5,17 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -22,5 +26,22 @@ jobs:
       - name: Check repository structure
         run: npm run check
 
-      - name: Run tests
+      - name: Check JavaScript syntax
+        run: npm run lint
+
+      - name: Run unit tests
         run: npm test
+
+      - name: Package project
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        run: |
+          mkdir -p dist
+          zip -r dist/woodfire-is.zip src tests scripts docs package.json README.md
+
+      - name: Upload artifact
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: woodfire-is-package
+          path: dist/woodfire-is.zip
+          retention-days: 30
